@@ -18,6 +18,7 @@ userForm.addEventListener('click',function(e){
         document.querySelector('.switchState').remove()
         clearForm()
         userForm.removeAttribute('data-switch')
+        submitBtn.value = 'Add'
     }
 })
 userForm.addEventListener('submit', function (e) {
@@ -61,6 +62,7 @@ userForm.addEventListener('submit', function (e) {
                 listUsers.insertAdjacentHTML('afterbegin', addedUser(user))
             });
     }
+    clearForm()
 });
 listUsers.addEventListener('click', function (e) {
     e.preventDefault()
